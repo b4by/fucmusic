@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+@layer base {
+  html,
+  body {
+    background: #000;
+  }
+
+  /* Input range - chrome and safari */
+
+  input[type="range"] {
+    --range-progress: 0;
+
+    -webkit-appearance: none;
+    position: relative;
+    background: #ccc;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  /* Input range - firefox */
+  input[type="range"]::-moz-range-track {
+    position: relative;
+    background: #ccc;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  /* played progress length - Chrome & safari*/
+  input[type="range"]::before {
+    content: "";
+    height: 4px;
+    background: #f50;
+    width: var(--range-progress);
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* played progress length - firefox */
+  input[type="range"]::-moz-range-progress {
+    background: #f50;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    height: 8px;
+  }
+
+  /* slider thumb - chrome and safari */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f50;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+  }
+
+  /* dragging thumb - chrome and safari */
+  input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+  }
+
+  /* slider thumb - firefox */
+  input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #f50;
+    cursor: pointer;
+    border: transparent;
+    position: relative;
+    z-index: 100;
+  }
+  /* dragging thumb - firefox */
+  input[type="range"]:active::-moz-range-thumb {
+    transform: scale(1.2);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* AUDIO PLAYER BOUNCE ICON */
+
+.bounce-icon {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 13px;
+  height: 13px;
+}
+
+.bounce-icon span {
+  width: 3px;
+  height: 100%;
+  background-color: #f18336;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 3px;
+  transform-origin: bottom;
+  @apply animate-bounceBars;
+  content: "";
+}
+
+.bounce-icon span:nth-of-type(2) {
+  animation-delay: -2.2s;
+}
+
+.bounce-icon span:nth-of-type(3) {
+  animation-delay: -3.7s;
+}
+
+/* SWIPER STYLES */
+
+.swiper-container {
+  width: 480px;
+}
+
+@media screen and (min-width: 640px) {
+  .swiper-container {
+    width: 640px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
+}
+
+:root {
+  --swiper-pagination-color: linear-gradient(to right, #f18336, #d12b2d);
+  --swiper-pagination-bullet-size: 14px;
+  --swiper-pagination-bullet-inactive-color: #efefef;
+  --swiper-pagination-bullet-inactive-opacity: 0.3;
+}
