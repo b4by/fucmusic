@@ -5,15 +5,16 @@ export const WhySection = () => {
   return (
     <section className="overflow-hidden bg-white">
       <section className="relative mx-auto max-w-7xl items-center border border-y-0 border-black bg-white px-8 py-8 text-black lg:px-24 lg:py-16">
-        <div className="mb-12">
-          <div className="xl:absolute xl:left-[100px]">
-            <div className="relative mb-8 aspect-[4/3] max-w-[400px] lg:aspect-[4/3] lg:max-w-[400px] xl:h-[300px] xl:w-[400px]">
-              <Link href="/images/18.jpg">
+        <div className="mb-12 flex flex-col items-center justify-center gap-6 lg:gap-12 xl:flex-row">
+          <div className="">
+            <div className="relative">
+              <Link href="/images/why_we.jpg">
                 <Image
-                  src="/images/18.jpg"
-                  alt="фото студии"
-                  width="500"
-                  height="300"
+                  src="/images/why_we.jpg"
+                  alt="логотип студии"
+                  width={1000}
+                  height={1000}
+                  className="h-[300px] w-full object-cover"
                 />
               </Link>
             </div>
