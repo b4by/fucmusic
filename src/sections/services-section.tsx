@@ -74,11 +74,13 @@ const PriceEl = ({ isRange, startRange, endRange, newPrice, oldPrice }) => {
   } else {
     return (
       <div className="flex items-center gap-x-2">
-        <span className="text-md font-bold">{formatPrice(newPrice)}</span>
+        {newPrice && (
+          <span className="text-md font-bold">{formatPrice(newPrice)}</span>
+        )}
         {oldPrice && (
           <span className="text-md line-through">{formatPrice(oldPrice)}</span>
         )}
-        <span className="text-md font-bold">₽</span>
+        {newPrice || (oldPrice && <span className="text-md font-bold">₽</span>)}
       </div>
     );
   }
