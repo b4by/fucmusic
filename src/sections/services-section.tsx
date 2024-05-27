@@ -80,7 +80,7 @@ const PriceEl = ({ isRange, startRange, endRange, newPrice, oldPrice }) => {
         {oldPrice && (
           <span className="text-md line-through">{formatPrice(oldPrice)}</span>
         )}
-        {newPrice || (oldPrice && <span className="text-md font-bold">₽</span>)}
+        {(newPrice || oldPrice) && <span className="text-md font-bold">₽</span>}
       </div>
     );
   }
