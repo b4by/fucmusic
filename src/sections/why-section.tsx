@@ -6,18 +6,16 @@ export const WhySection = () => {
     <section className="overflow-hidden bg-white">
       <section className="relative mx-auto max-w-7xl items-center border border-y-0 border-black bg-white px-8 py-8 text-black lg:px-24 lg:py-16">
         <div className="mb-12 flex flex-col items-center justify-center gap-6 lg:gap-12 xl:flex-row">
-          <div className="">
-            <div className="relative">
-              <Link href="/images/why_we.jpg">
-                <Image
-                  src="/images/why_we.jpg"
-                  alt="логотип студии"
-                  width={1000}
-                  height={1000}
-                  className="h-[300px] w-full object-cover"
-                />
-              </Link>
-            </div>
+          <div className="relative">
+            <Link href="/images/why_we.jpg">
+              <Image
+                src="/images/why_we.jpg"
+                alt="фотография студии"
+                width={1000}
+                height={1000}
+                className="h-[300px] w-full object-cover"
+              />
+            </Link>
           </div>
           <div className="flex max-w-xl flex-col gap-y-8 py-6 xl:ml-auto">
             <h3 className="text-4xl font-bold uppercase">Почему мы</h3>

@@ -3,9 +3,11 @@ import { navLinks } from "@/constants/navLinks";
 import Link from "next/link";
 import { useState } from "react";
 import { Logo } from "./logo";
+import { FormModal } from "./form-modal/form-modal";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
     <div className="mx-auto w-full justify-center border-b border-white">
@@ -63,8 +65,19 @@ export const Header = () => {
               {link.name}
             </Link>
           ))}
+          {/* <button
+            type="button"
+            onClick={() => setIsFormOpen(!isFormOpen)}
+            className="rounded-md border border-[#F18336] bg-[#F18336] px-3 py-2 font-bold text-white transition duration-300 ease-in-out hover:opacity-75"
+          >
+            Дистрибуция
+          </button> */}
         </nav>
       </div>
+      <FormModal
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(!isFormOpen)}
+      />
     </div>
   );
 };

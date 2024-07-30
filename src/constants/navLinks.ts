@@ -1,26 +1,30 @@
 export const navLinks = [
   {
     name: "Наши работы",
-    href: "#examples",
+    href: "/#examples",
   },
   {
     name: "Услуги",
-    href: "#services",
+    href: "/#services",
   },
   {
     name: "Оборудование",
-    href: "#equipments",
+    href: "/#equipments",
   },
   {
     name: "Фото",
-    href: "#photos",
+    href: "/#photos",
   },
   {
     name: "Отзывы",
-    href: "#reviews",
+    href: "/#reviews",
+  },
+  {
+    name: "FAQ",
+    href: "/faq",
   },
   {
     name: "Контакты",
-    href: "#contacts",
+    href: "/#contacts",
   },
 ];
